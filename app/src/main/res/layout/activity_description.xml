@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="82dp"
+        android:layout_marginTop="30dp"
         android:text="How to Use"
         android:textColor="#009688"
         android:textColorHighlight="#E91E63"
