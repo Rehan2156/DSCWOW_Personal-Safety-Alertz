@@ -63,7 +63,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
                   switch (menuItem.getItemId()) {
                       case R.id.dashboard:
                           startActivity(new Intent(getApplicationContext(),
-                                  MainActivity.class));
+                                  Dashboard.class));
                           overridePendingTransition(0, 0);
                           return true;
 
