@@ -51,7 +51,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
           });
 
 
-          //-----------------------BOTTOM NAVIAGATION---------------------------
+          //-----------------------BOTTOM NAVIGATION---------------------------
 
           BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 

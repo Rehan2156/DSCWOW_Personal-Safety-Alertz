@@ -17,7 +17,8 @@
         android:textColor="#009688"
         android:textColorHighlight="#E91E63"
         android:textIsSelectable="true"
-        android:textSize="40sp" />
+        android:textSize="20sp"
+        android:id="@+id/loc"/>
 
     <Button
         android:id="@+id/send_alert"
