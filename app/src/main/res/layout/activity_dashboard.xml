@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Personal Safety"
+        android:text="Personal Safety Alertz"
         android:textColor="#009688"
         android:textColorHighlight="#E91E63"
         android:textIsSelectable="true"

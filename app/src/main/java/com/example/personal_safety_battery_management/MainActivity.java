@@ -98,49 +98,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
-        bottomNavigationView.setSelectedItemId(R.id.dashboard);
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch(menuItem.getItemId()){
-                    case R.id.dashboard:
-                        return true;
-
-                    case R.id.about:
-                        startActivity(new Intent(getApplicationContext(),
-                                About.class));
-                        overridePendingTransition(0,0);
-                        return true;
-
-                    case R.id.settings:
-                        startActivity(new Intent(getApplicationContext(),
-                                Settings.class));
-                        overridePendingTransition(0,0);
-                        return true;
-
-                    case R.id.description:
-                        startActivity(new Intent(getApplicationContext(),
-                                Description.class));
-                        overridePendingTransition(0,0);
-                        return true;
-
-                    case R.id.close_friends:
-                        startActivity(new Intent(getApplicationContext(),
-                                Close_Friends.class));
-                        overridePendingTransition(0,0);
-                        return true;
-
-                }
-                return false;
-            }
-        });
-
 //        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
 //                .getBoolean("isFirstRun", true);
 //
