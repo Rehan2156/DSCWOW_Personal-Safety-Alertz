@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:text="About Us"
+        android:textColor="#009688"
+        android:textColorHighlight="#E91E63"
+        android:textIsSelectable="true"
+        android:textSize="40sp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/colorPrimary"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="150dp"
+        android:elegantTextHeight="true"
+        android:text ="This application has been developed by Android Geeks Team for Hackathon. Table no.335. Topic: Personal/ Women Safety"
+        android:textColor="#000000"
+        android:textColorHighlight="#E91E63"
+        android:textIsSelectable="true"
+        android:textSize="20sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="245dp"
+        android:elegantTextHeight="true"
+        android:text ="Rehan Shaikh"
+        android:textColor="#000000"
+        android:textColorHighlight="#E91E63"
+        android:textIsSelectable="true"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="300dp"
+        android:elegantTextHeight="true"
+        android:text ="Nikhil Giramkar"
+        android:textColor="#000000"
+        android:textColorHighlight="#E91E63"
+        android:textIsSelectable="true"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="355dp"
+        android:elegantTextHeight="true"
+        android:text ="Shubham Rane"
+        android:textColor="#000000"
+        android:textColorHighlight="#E91E63"
+        android:textIsSelectable="true"
+        android:textSize="18sp" />
+
+
+
+
+</RelativeLayout>
