@@ -17,7 +17,8 @@
         android:textColor="#009688"
         android:textColorHighlight="#E91E63"
         android:textIsSelectable="true"
-        android:textSize="40sp" />
+        android:textSize="20sp"
+        android:id="@+id/loc"/>
 
     <Button
         android:id="@+id/send_alert"
@@ -42,18 +43,18 @@
         app:menu="@menu/menu_navigation"
         android:layout_alignParentBottom="true"/>
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="start|top"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="430dp"
-        android:inputType="textMultiLine"
-        android:hint="Write a message"
-        />
+<!--    <EditText-->
+<!--        android:id="@+id/editText2"-->
+<!--        android:layout_width="175dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:gravity="start|top"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="430dp"-->
+<!--        android:inputType="textMultiLine"-->
+<!--        android:hint="Write a message"-->
+<!--        />-->
 
 
 </RelativeLayout>
