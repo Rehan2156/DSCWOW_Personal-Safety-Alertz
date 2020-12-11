@@ -11,12 +11,33 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="82dp"
+        android:layout_marginTop="30dp"
         android:text="Settings"
         android:textColor="#009688"
         android:textColorHighlight="#E91E63"
         android:textIsSelectable="true"
         android:textSize="40sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:text="Residential Location"
+        android:textColor="#FF0000"
+        android:textColorHighlight="#673AB7"
+        android:visibility="visible"
+        tools:visibility="visible"
+        android:id="@+id/bt_picker" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:id="@+id/text_view"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginTop="145dp"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

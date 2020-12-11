@@ -29,7 +29,7 @@ public class Dashboard extends AppCompatActivity {
 
                     case R.id.about:
                         startActivity(new Intent(getApplicationContext(),
-                                About.class));
+                                MainActivity.class));
                         overridePendingTransition(0,0);
                         return true;
 

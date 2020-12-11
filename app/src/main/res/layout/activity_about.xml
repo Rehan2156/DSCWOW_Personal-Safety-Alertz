@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="30dp"
         android:text="About Us"
         android:textColor="#009688"
         android:textColorHighlight="#E91E63"
@@ -32,12 +32,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_centerHorizontal="true"
-        android:padding="10dp"
+        android:padding="15dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="105dp"
         android:elegantTextHeight="true"
-        android:text ="This application has been developed by Android Geeks Team for Hackathon. Table no.335. Topic: Personal/ Women Safety"
+        android:text ="This application has been developed by a group of CS Professionals as a part of their SDL Mini Project..."
         android:textColor="#000000"
         android:textColorHighlight="#E91E63"
         android:textIsSelectable="true"
@@ -48,14 +48,26 @@
         android:padding="10dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="245dp"
+        android:layout_marginTop="195dp"
         android:elegantTextHeight="true"
-        android:text ="Rehan Shaikh"
+        android:text ="Shubham Rane"
         android:textColor="#000000"
         android:textColorHighlight="#E91E63"
         android:textIsSelectable="true"
         android:textSize="18sp" />
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="240dp"
+        android:elegantTextHeight="true"
+        android:text ="Rupesh Bodkhe"
+        android:textColor="#000000"
+        android:textColorHighlight="#E91E63"
+        android:textIsSelectable="true"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -63,7 +75,21 @@
         android:padding="10dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="285dp"
+        android:elegantTextHeight="true"
+        android:text ="Rehan Shaikh"
+        android:textColor="#000000"
+        android:textColorHighlight="#E91E63"
+        android:textIsSelectable="true"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="330dp"
         android:elegantTextHeight="true"
         android:text ="Nikhil Giramkar"
         android:textColor="#000000"
@@ -73,19 +99,45 @@
 
     <TextView
         android:layout_width="wrap_content"
+
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="375dp"
+        android:elegantTextHeight="true"
+        android:text ="Under the guidance of...."
+        android:textColor="#000000"
+        android:textColorHighlight="#E91E63"
+        android:textIsSelectable="true"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_centerHorizontal="true"
         android:padding="10dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="355dp"
+        android:layout_marginTop="425dp"
         android:elegantTextHeight="true"
-        android:text ="Shubham Rane"
+        android:text ="Mrs. Shobha Raskar Ma'am"
         android:textColor="#000000"
         android:textColorHighlight="#E91E63"
         android:textIsSelectable="true"
         android:textSize="18sp" />
 
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="470dp"
+        android:elegantTextHeight="true"
+        android:text ="Mr. Govind Pole Sir"
+        android:textColor="#000000"
+        android:textColorHighlight="#E91E63"
+        android:textIsSelectable="true"
+        android:textSize="18sp" />
 
 
 </RelativeLayout>
