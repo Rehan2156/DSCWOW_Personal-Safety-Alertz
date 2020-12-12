@@ -5,122 +5,172 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Dashboard">
+    tools:context=".Dashboard"
+    android:background="@drawable/gradient_background">
 
     <TextView
+        android:id="@+id/loc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="Personal Safety"
-        android:textColor="#009688"
-        android:textColorHighlight="#E91E63"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="DASHBOARD"
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorLink="#000000"
         android:textIsSelectable="true"
-        android:textSize="20sp"
-        android:id="@+id/loc"/>
+        android:textSize="22sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="175dp"
+        android:layout_height="125dp"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:id="@+id/editText2"
+            android:layout_marginTop="40dp"
+            android:hint="Message (if any)..."
+            android:textSize="15dp"
+            android:fontFamily="@font/capriola"
+            android:background="@drawable/edit_text_border"
+            android:padding="15dp"
+            />
+
+        <Button
+            android:id="@+id/send_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="230dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/gradient_background3"
+            android:fontFamily="@font/capriola"
+            android:padding="10dp"
+            android:drawableLeft="@drawable/ic_baseline_send_24"
+            android:text="Send"
+            android:textColor="#000000"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="345dp"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        >
 
-        android:textColor="#009688"
-        android:textColorHighlight="#E91E63"
-        android:textIsSelectable="true"
-        android:textSize="20sp"
-        android:id="@+id/text1"/>
-
-    <EditText
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/editText2"
-        android:layout_marginTop="150dp"
-        android:hint="Write Something..."
-        />
-
-    <Button
-        android:id="@+id/send_alert"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="350dp"
-        android:text="Send Alert"
-        android:textColor="#FF0000"
-        android:textColorHighlight="#673AB7"
-        android:visibility="visible"
-        tools:visibility="visible" />
-
-    <Button
-        android:id="@+id/emergency"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="25dp"
-        android:layout_marginBottom="280dp"
-        android:text="Emergency!!!"
-        android:textColor="#000000"
-        android:textColorHighlight="#673AB7"
-        android:visibility="visible"
-        tools:visibility="visible" />
+        <TextView
+            android:id="@+id/loc3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/capriola"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:text="Quick texts: "
+            android:textColor="#000000"
+            android:textColorHighlight="#000000"
+            android:textColorLink="#000000"
+            android:textIsSelectable="true"
+            android:textSize="20sp" />            />
+        <Button
+            android:id="@+id/emergency"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
+            android:text="Emergency!!!"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/gradient_background2"
+            android:visibility="visible"
+            tools:visibility="visible"
+            android:foreground="?attr/selectableItemBackgroundBorderless" />
 
 
-    <Button
-        android:id="@+id/help"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="35dp"
-        android:layout_marginBottom="280dp"
-        android:text="Help!!!"
-        android:textColor="#000000"
-        android:textColorHighlight="#673AB7"
-        android:visibility="visible"
-        tools:visibility="visible" />
+        <Button
+            android:id="@+id/come_home_late"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="25dp"
+            android:text="I'll come home late"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/gradient_background2"
+            android:visibility="visible"
+            tools:visibility="visible"
+            android:foreground="?attr/selectableItemBackgroundBorderless" />
+        <Button
+            android:id="@+id/come_here_asap"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="125dp"
+            android:layout_marginLeft="20dp"
+            android:text="Come here ASAP!!!"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:background="@drawable/gradient_background2"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            android:visibility="visible"
+            tools:visibility="visible" />
 
-    <Button
-        android:id="@+id/come_here_asap"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="210dp"
-        android:text="Come here ASAP!!!"
-        android:layout_centerHorizontal="true"
-        android:textColor="#000000"
-        android:textColorHighlight="#673AB7"
-        android:visibility="visible"
-        tools:visibility="visible" />
 
-    <Button
-        android:id="@+id/come_home_late"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
+        <Button
+            android:id="@+id/help"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="125dp"
+            android:layout_marginLeft="190dp"
+            android:layout_marginRight="25dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:text="Help Me!!!"
+            android:elevation="20dp"
+            android:background="@drawable/gradient_background2"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:visibility="visible"
+            tools:visibility="visible" />
 
-        android:layout_marginBottom="140dp"
-        android:text="I'll come home late"
-        android:layout_centerHorizontal="true"
-        android:textColor="#000000"
-        android:textColorHighlight="#673AB7"
-        android:visibility="visible"
-        tools:visibility="visible" />
 
-    <Button
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
         android:id="@+id/emergency_dial_button"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="60dp"
-        android:text="Speed Dial"
-        android:textColor="#FF0303"
-        android:textColorHighlight="#673AB7"
+        android:layout_marginLeft="325dp"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/gradient_background4"
+        android:padding="15dp"
+        android:src="@drawable/ic_baseline_phone_forwarded_24"
         android:visibility="visible"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:elevation="20dp"
         tools:visibility="visible" />
 
 
@@ -128,10 +178,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_navigation"
-        app:itemBackground="@color/colorPrimary"
+        android:background="@drawable/bottom_navigation_gradient"
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
         app:menu="@menu/menu_navigation"
+        android:layout_marginBottom="0dp"
         android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

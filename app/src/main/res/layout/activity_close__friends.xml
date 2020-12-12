@@ -4,137 +4,168 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Close_Friends">
+    tools:context=".Close_Friends"
+    android:background="@drawable/gradient_background">
 
     <TextView
+        android:id="@+id/loc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="59dp"
-        android:layout_marginLeft="59dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="59dp"
-        android:layout_marginRight="59dp"
-        android:text="@string/close_friends"
-        android:layout_centerHorizontal="true"
-
-
-        android:textColor="#009688"
-        android:textColorHighlight="#E91E63"
-        android:textIsSelectable="true"
-        android:textSize="40sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="111dp"
-        android:elegantTextHeight="true"
-        android:padding="10dp"
-        android:text="@string/closeFriends_text"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="CLOSE FRIENDS"
         android:textColor="#000000"
-        android:textColorHighlight="#E91E63"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:textColorHighlight="#000000"
+        android:textColorLink="#000000"
         android:textIsSelectable="true"
-        android:textSize="16sp"
+        android:textSize="22sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="120dp"
+        android:elegantTextHeight="true"
+        android:padding="15dp"
+        android:text="Please select contact from phonebook..."
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:textIsSelectable="true"
+        android:textSize="18sp"
         tools:ignore="UnusedAttribute" />
+
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="215dp"
+        android:layout_height="85dp"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/phone3"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_toStartOf="@+id/addContact2"
+            android:layout_toLeftOf="@+id/addContact2"
+            android:inputType="phone"/>
+
+        <Button
+            android:id="@+id/addContact3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addContact2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginVertical="15dp"
+            android:layout_marginLeft = "200dp"
+            android:background="@drawable/gradient_background2"
+            android:textColor="#ffffff"
+            android:padding="10dp"
+            android:text="@string/add_contact" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="345dp"
+        android:layout_height="85dp"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/phone2"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_toStartOf="@+id/addContact2"
+            android:layout_toLeftOf="@+id/addContact2"
+            android:inputType="phone"/>
+
+        <Button
+            android:id="@+id/addContact2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addContact2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginVertical="15dp"
+            android:layout_marginLeft = "200dp"
+            android:background="@drawable/gradient_background2"
+            android:textColor="#ffffff"
+            android:padding="10dp"
+            android:text="@string/add_contact" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="465dp"
+        android:layout_height="85dp"
+        android:layout_centerHorizontal="true">
+
+
+        <EditText
+            android:id="@+id/phone1"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_toStartOf="@+id/addContact2"
+            android:layout_toLeftOf="@+id/addContact2"
+            android:inputType="phone"/>
+        <Button
+            android:id="@+id/addContact1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addContact2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginVertical="15dp"
+            android:layout_marginLeft = "200dp"
+            android:background="@drawable/gradient_background2"
+            android:textColor="#ffffff"
+            android:padding="10dp"
+            android:text="@string/add_contact" />
+
+    </androidx.cardview.widget.CardView>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_navigation"
-        app:itemBackground="@color/colorPrimary"
+        android:background="@drawable/bottom_navigation_gradient"
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
         app:menu="@menu/menu_navigation"
+        android:layout_marginBottom="0dp"
         android:layout_alignParentBottom="true"/>
 
-    <EditText
-        android:id="@+id/phone3"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/phone2"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginRight="14dp"
-        android:layout_toStartOf="@+id/addContact2"
-        android:layout_toLeftOf="@+id/addContact2"
-        android:inputType="phone"/>
-
-    <Button
-        android:id="@+id/addContact3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/addContact2"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:text="@string/add_contact" />
-
-    <EditText
-        android:id="@+id/phone2"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/phone1"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginRight="14dp"
-        android:layout_toStartOf="@+id/addContact2"
-        android:layout_toLeftOf="@+id/addContact2"
-        android:inputType="phone"/>
-
-    <Button
-        android:id="@+id/addContact1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="197dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:text="@string/add_contact" />
-
-    <EditText
-        android:id="@+id/phone1"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="197dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginRight="14dp"
-        android:layout_toStartOf="@+id/addContact1"
-        android:layout_toLeftOf="@+id/addContact1"
-        android:inputType="phone" />
-
-    <Button
-        android:id="@+id/addContact2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/addContact1"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="47dp"
-        android:text="@string/add_contact" />
-
 </RelativeLayout>
-
