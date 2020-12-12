@@ -13,24 +13,42 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Close_Friends extends AppCompatActivity {
     Button add_c;
-    EditText add_no;
+    EditText add_no1,add_no2,add_no3;
     Cursor cursor = null;
-
     static String phone1,phone2,phone3;
+    DataBaseHelper dataBaseHelper = new DataBaseHelper(Close_Friends.this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_close__friends);
 
-
         ActionBar actionBar = getSupportActionBar();
         actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.appbar_background));
+
+        add_no1 = (EditText)findViewById(R.id.phone1);
+        add_no2 = (EditText)findViewById(R.id.phone2);
+        add_no3 = (EditText)findViewById(R.id.phone3);
+
+        List<ContactModel> everyone = dataBaseHelper.getEveryone();
+        if(!everyone.isEmpty()) {
+            for(ContactModel i:everyone)
+                System.out.println(i.getName());
+            add_no1.setText(everyone.get(0).getPhone());
+            add_no2.setText(everyone.get(1).getPhone());
+            add_no3.setText(everyone.get(2).getPhone());
+            System.out.println("executing....");
+        }
+
 
         onClickAdd1();
         onClickAdd2();
@@ -149,13 +167,16 @@ public class Close_Friends extends AppCompatActivity {
         {
             try{
                 Uri uri = data.getData();
-                cursor = getContentResolver().query(uri, new String[] {ContactsContract.CommonDataKinds.Phone.NUMBER}, null, null, null);
+                cursor = getContentResolver().query(uri, new String[] {ContactsContract.CommonDataKinds.Phone.NUMBER,ContactsContract.Contacts.DISPLAY_NAME}, null, null, null);
                 if(cursor != null && cursor.moveToNext())
                 {
                     String phone = cursor.getString(0);
-                    add_no = (EditText)findViewById(R.id.phone1);
-                    add_no.setText(phone);
-                    this.phone1=phone;
+                    String name = cursor.getString(1);
+                    ContactModel contactModel = new ContactModel(requestCode,name,phone);
+                    add_no1.setText(phone);
+                    boolean status = dataBaseHelper.addOne(contactModel,requestCode);
+                    String ToastMsg = status==true?"Contact added successfully":"Error in adding contact";
+                    Toast.makeText(Close_Friends.this,ToastMsg,Toast.LENGTH_SHORT).show();
                 }
             }
             catch (Exception e)
@@ -169,13 +190,16 @@ public class Close_Friends extends AppCompatActivity {
         {
             try{
                 Uri uri = data.getData();
-                cursor = getContentResolver().query(uri, new String[] {ContactsContract.CommonDataKinds.Phone.NUMBER}, null, null, null);
+                cursor = getContentResolver().query(uri, new String[] {ContactsContract.CommonDataKinds.Phone.NUMBER,ContactsContract.Contacts.DISPLAY_NAME}, null, null, null);
                 if(cursor != null && cursor.moveToNext())
                 {
                     String phone = cursor.getString(0);
-                    add_no = (EditText)findViewById(R.id.phone2);
-                    add_no.setText(phone);
-                    this.phone2=phone;
+                    String name = cursor.getString(1);
+                    ContactModel contactModel = new ContactModel(requestCode,name,phone);
+                    add_no2.setText(phone);
+                    boolean status = dataBaseHelper.addOne(contactModel,requestCode);
+                    String ToastMsg = status==true?"Contact added successfully":"Error in adding contact";
+                    Toast.makeText(Close_Friends.this,ToastMsg,Toast.LENGTH_SHORT).show();
                 }
             }
             catch (Exception e)
@@ -189,13 +213,16 @@ public class Close_Friends extends AppCompatActivity {
         {
             try{
                 Uri uri = data.getData();
-                cursor = getContentResolver().query(uri, new String[] {ContactsContract.CommonDataKinds.Phone.NUMBER}, null, null, null);
+                cursor = getContentResolver().query(uri, new String[] {ContactsContract.CommonDataKinds.Phone.NUMBER,ContactsContract.Contacts.DISPLAY_NAME}, null, null, null);
                 if(cursor != null && cursor.moveToNext())
                 {
                     String phone = cursor.getString(0);
-                    add_no = (EditText)findViewById(R.id.phone3);
-                    add_no.setText(phone);
-                    this.phone3=phone;
+                    String name = cursor.getString(1);
+                    ContactModel contactModel = new ContactModel(requestCode,name,phone);
+                    add_no3.setText(phone);
+                    boolean status = dataBaseHelper.addOne(contactModel,requestCode);
+                    String ToastMsg = status==true?"Contact added successfully":"Error in adding contact";
+                    Toast.makeText(Close_Friends.this,ToastMsg,Toast.LENGTH_SHORT).show();
                 }
             }
             catch (Exception e)
