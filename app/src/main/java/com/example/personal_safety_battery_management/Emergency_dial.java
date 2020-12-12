@@ -1,5 +1,6 @@
 package com.example.personal_safety_battery_management;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -16,6 +17,12 @@ public class Emergency_dial extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency_dial);
+
+
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.appbar_background));
+
 
         //---------Emergency call to police
         callPolice = (Button) findViewById(R.id.call_police);

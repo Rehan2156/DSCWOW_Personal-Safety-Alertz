@@ -4,20 +4,23 @@
     android:layout_height="fill_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_centerHorizontal="true"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background">
 
     <TextView
+        android:id="@+id/loc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="Select your home location"
-        android:textColor="#009688"
-        android:textColorHighlight="#E91E63"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="HOME LOCATION"
+        android:textColor="#000000"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="125dp"
+        android:textColorHighlight="#000000"
+        android:textColorLink="#000000"
         android:textIsSelectable="true"
-
-        android:textSize="40sp" />
+        android:textSize="22sp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -25,8 +28,11 @@
         android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
         android:text="Residential Location"
-        android:textColor="#FF0000"
-        android:textColorHighlight="#673AB7"
+        android:textColor="#ffffff"
+        android:background="@drawable/gradient_background2"
+        android:layout_marginHorizontal="115dp"
+        android:layout_marginVertical="200dp"
+        android:padding="10dp"
         android:visibility="visible"
         tools:visibility="visible"
         android:id="@+id/bt_picker" />
@@ -39,4 +45,4 @@
         android:textSize="30sp"
         android:gravity="center"
         android:layout_marginTop="145dp"/>
-    </LinearLayout>
+</LinearLayout>

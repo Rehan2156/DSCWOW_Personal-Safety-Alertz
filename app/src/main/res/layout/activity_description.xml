@@ -5,27 +5,178 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Description">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="How to Use"
-        android:textColor="#009688"
-        android:textColorHighlight="#E91E63"
-        android:textIsSelectable="true"
-        android:textSize="40sp" />
+    tools:context=".Description"
+    android:background="@drawable/gradient_background">
 
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="50dp"
+        android:layout_height="600dp"
+        android:layout_centerHorizontal="true">
+
+<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:elegantTextHeight="true"
+                android:text ="ABOUT THIS APP:"
+                android:fontFamily="@font/capriola"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textColorHighlight="#E91E63"
+                android:textIsSelectable="true"
+                android:textSize="26dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:elegantTextHeight="true"
+                android:text ="\t\tGet your best shot of safety in emergency situations. \n\t\tThis app helps you out whenever your safety is at risk by reaching out to your trusted contacts and providing them with your current location and a text message.
+\n\t\tWhen the auto alert feature is turned on, your location along with a message will be automatically shared with your trusted contacts if your device is in about to die situation.
+\n\t\tThis app also alerts you when your battery is charged upto certain limit."
+                android:textStyle="normal"
+                android:textColor="#000000"
+                android:textColorHighlight="#E91E63"
+                android:textIsSelectable="true"
+                android:textSize="24dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:elegantTextHeight="true"
+                android:text ="HOW TO USE:"
+                android:fontFamily="@font/capriola"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textColorHighlight="#E91E63"
+                android:textIsSelectable="true"
+                android:textSize="26dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="3dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:elegantTextHeight="true"
+                android:text ="\tDASHBOARD:"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textColorHighlight="#E91E63"
+                android:textIsSelectable="true"
+                android:textSize="25dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="1dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:elegantTextHeight="true"
+                android:text ="
+\t⦁	Turn on/off AUTO ALERT to send your location along with a text, automatically when your battery reaches to a set limit.
+\n\t⦁	SEND ALERT:
+\n\tSend your current location along with the extra details IMMEDIATELY with a single tap to your trusted contacts.
+\n\t⦁	DEFAULT MESSAGES:
+\n\tSelect the message you want to share from the screen and this message will be shared along with your location with.
+\n\t⦁	EMERGENCY CALL:
+\n\tCall the national emergency number at a single tap."
+                android:textStyle="normal"
+                android:textColor="#000000"
+                android:textColorHighlight="#E91E63"
+                android:textIsSelectable="true"
+                android:textSize="24dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="3dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:elegantTextHeight="true"
+                android:text ="\tCLOSE FRIENDS:"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textColorHighlight="#E91E63"
+                android:textIsSelectable="true"
+                android:textSize="25dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="3dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:elegantTextHeight="true"
+                android:text ="\tSelect upto 3 emergency contacts with whom you would want to share your location."
+                android:textStyle="normal"
+                android:textColor="#000000"
+                android:textColorHighlight="#E91E63"
+                android:textIsSelectable="true"
+                android:textSize="24dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="3dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:elegantTextHeight="true"
+                android:text ="\tSETTINGS:"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textColorHighlight="#E91E63"
+                android:textIsSelectable="true"
+                android:textSize="25dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="3dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:elegantTextHeight="true"
+                android:text ="\t⦁	LOCATION: Mark your home location.
+\n\t⦁	EMERGENCY BATTERY PERCENTAGE:
+\n\tSet the battery percentage at which your location will be automatically shared with your trusted/emergency contacts you selected in 'CLOSE FRIENDS'.
+\n\t⦁	BATTERY CHARGE ALERT:
+ \n\tSet the battery percentage at which you want to be notified while charging your device.\n\n\n\n"
+                android:textStyle="normal"
+                android:textColor="#000000"
+                android:textColorHighlight="#E91E63"
+                android:textIsSelectable="true"
+                android:textSize="24dp" />
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+    </androidx.cardview.widget.CardView>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_navigation"
-        app:itemBackground="@color/colorPrimary"
+        android:background="@drawable/bottom_navigation_gradient"
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
         app:menu="@menu/menu_navigation"
+        android:layout_marginBottom="0dp"
         android:layout_alignParentBottom="true"/>
+
+
 
 </RelativeLayout>

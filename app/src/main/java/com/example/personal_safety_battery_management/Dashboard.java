@@ -1,6 +1,7 @@
 package com.example.personal_safety_battery_management;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.BroadcastReceiver;
@@ -15,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -35,7 +37,11 @@ public class Dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
 
-        battery = (TextView)this.findViewById(R.id.text1);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.appbar_background));
+
+        //battery = (TextView)this.findViewById(R.id.text1);
         batterylevel();
 
 
@@ -45,7 +51,7 @@ public class Dashboard extends AppCompatActivity {
         Button button2 = findViewById(R.id.help);
         Button button3 = findViewById(R.id.come_here_asap);
         Button button4 = findViewById(R.id.come_home_late);
-        Button button5 = findViewById(R.id.emergency_dial_button);
+        ImageButton button5 = findViewById(R.id.emergency_dial_button);
         final EditText message = findViewById(R.id.editText2);
 
         button1.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +64,7 @@ public class Dashboard extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                message.setText("Help!!!");
+                message.setText("Help Me!!!");
             }
         });
 
@@ -98,7 +104,7 @@ public class Dashboard extends AppCompatActivity {
         double homeLat=HomeLocation.homeLat;
         double homeLong=HomeLocation.homeLong;
         String diff = String.format("%.2f",distance(currLat,homeLat,currLong,homeLong));
-        tv.setText("Distance between home and your current location is "+diff+" km");
+       // tv.setText("Distance between home and your current location is "+diff+" km");
 
 
 
@@ -117,11 +123,11 @@ public class Dashboard extends AppCompatActivity {
                 System.out.println("Typed msg: "+typed_msg);
                 if(battery_level<=10)
                 {
-                    msg_temp="Sent from SAFETY BATTERY ALERTZ." + typed_msg+" My battery is about to die (Automatic alert). Battery: "+battery_level+"%.  Current location is https://maps.google.com/?q="+currLat+","+currLong;
+                    msg_temp="Sent from PERSONAL SAFETY ALERTZ." + typed_msg+" My battery is about to die (Automatic alert). Battery: "+battery_level+"%.  Current location is https://maps.google.com/?q="+currLat+","+currLong;
                 }
                 else
                 {
-                    msg_temp="Sent from SAFETY BATTERY ALERTZ." + typed_msg+" (Manual Alert). Battery: "+battery_level+"%.  Current location is https://maps.google.com/?q="+currLat+","+currLong;
+                    msg_temp="Sent from PERSONAL SAFETY ALERTZ." + typed_msg+" (Manual Alert). Battery: "+battery_level+"%.  Current location is https://maps.google.com/?q="+currLat+","+currLong;
                 }
                 SMS.sendSMS(phone,msg_temp);
                 showMessageOKCancel("Message sent successfully to your trusted contacts. Stay safe \uD83D\uDE00");
@@ -148,7 +154,7 @@ public class Dashboard extends AppCompatActivity {
 
                     case R.id.about:
                         startActivity(new Intent(getApplicationContext(),
-                                MainActivity.class));
+                                About.class));
                         overridePendingTransition(0,0);
                         return true;
 
@@ -187,7 +193,7 @@ public class Dashboard extends AppCompatActivity {
                     level = (raw_level*100)/scale;
                 }
                 battery_level = level;
-                battery.setText(String.valueOf(level) + "%");
+                //battery.setText(String.valueOf(level) + "%");
             }
         };
         IntentFilter batteryLevelFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
