@@ -8,8 +8,10 @@ import java.util.ArrayList;
 public class SMS {
 
     public static void sendSMS(ArrayList<String> a,String msg) {
+        String phone_Num = null;
         for (String num : a) {
-            String phone_Num = num;
+            if(num != null)
+                phone_Num = num;
             String send_msg = msg;
             System.out.println("Phone number is "+phone_Num);
             try {
