@@ -19,6 +19,7 @@ public class Close_Friends extends AppCompatActivity {
     Button add_c;
     EditText add_no;
     Cursor cursor = null;
+
     static String phone1,phone2,phone3;
 
     @Override
@@ -41,7 +42,7 @@ public class Close_Friends extends AppCompatActivity {
                 switch(menuItem.getItemId()){
                     case R.id.dashboard:
                         startActivity(new Intent(getApplicationContext(),
-                                Dashboard.class));
+                                MainActivity.class));
                         overridePendingTransition(0,0);
                         return true;
 
@@ -198,4 +199,8 @@ public class Close_Friends extends AppCompatActivity {
             }
         }
     }
+
 }
+
+
+
