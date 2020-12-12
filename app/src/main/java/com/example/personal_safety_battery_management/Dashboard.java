@@ -18,10 +18,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Dashboard extends AppCompatActivity {
     TextView tv;
@@ -112,23 +114,36 @@ public class Dashboard extends AppCompatActivity {
         alert.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 final ArrayList<String> phone= new ArrayList<>();
-                if(Close_Friends.phone1!=null)
-                    phone.add(Close_Friends.phone1);
-                if(Close_Friends.phone2!=null)
-                    phone.add(Close_Friends.phone2);
-                if(Close_Friends.phone3!=null)
-                    phone.add(Close_Friends.phone3);
+                final ArrayList<String> name= new ArrayList<>();
+
+                DataBaseHelper dataBaseHelper = new DataBaseHelper(Dashboard.this);
+                List<ContactModel> everyone = dataBaseHelper.getEveryone();
+                System.out.println(everyone.toString());
+                if(!everyone.isEmpty()) {
+                    phone.add(everyone.get(0).getPhone());
+                    name.add(everyone.get(0).getName());
+                    phone.add(everyone.get(1).getPhone());
+                    name.add(everyone.get(1).getName());
+                    phone.add(everyone.get(2).getPhone());
+                    name.add(everyone.get(2).getName());
+                }
+
                 String msg_temp="";
                 String typed_msg = message.getText().toString();
+                String loc = "https://maps.google.com/?q="+currLat+","+currLong;
                 System.out.println("Typed msg: "+typed_msg);
                 if(battery_level<=10)
                 {
-                    msg_temp="Sent from PERSONAL SAFETY ALERTZ." + typed_msg+" My battery is about to die (Automatic alert). Battery: "+battery_level+"%.  Current location is https://maps.google.com/?q="+currLat+","+currLong;
+                    msg_temp="Sent from SAFETY BATTERY ALERTZ." + typed_msg+" My battery is about to die (Automatic alert).\nBattery: "+battery_level+"%.\nCurrent location: "+loc;
                 }
                 else
                 {
-                    msg_temp="Sent from PERSONAL SAFETY ALERTZ." + typed_msg+" (Manual Alert). Battery: "+battery_level+"%.  Current location is https://maps.google.com/?q="+currLat+","+currLong;
+                    msg_temp="Sent from SAFETY BATTERY ALERTZ." + typed_msg+" (Manual Alert).\nBattery: "+battery_level+"%.\nCurrent location: "+loc;
                 }
+                AlertModel alertModel = new AlertModel(-1,battery_level,loc,msg_temp,name.get(0),name.get(1),name.get(2),phone.get(0),phone.get(1),phone.get(2));
+                boolean success = dataBaseHelper.addOneAlert(alertModel);
+                String successMsg= success==true?"Added to database":"Error occurred";
+                Toast.makeText(Dashboard.this,successMsg,Toast.LENGTH_SHORT).show();
                 SMS.sendSMS(phone,msg_temp);
                 showMessageOKCancel("Message sent successfully to your trusted contacts. Stay safe \uD83D\uDE00");
             }

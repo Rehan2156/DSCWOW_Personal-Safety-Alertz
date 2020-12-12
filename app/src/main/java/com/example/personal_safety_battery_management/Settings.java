@@ -38,7 +38,7 @@ import android.widget.Toast;
 
 public class Settings extends AppCompatActivity {
 
-      Button btPicker;
+      Button btPicker,btHistory;
       TextView textview;
       int PLACE_PICKER_REQUEST = 1;
 //---------------------NOTIFICATION---------------------
@@ -110,6 +110,11 @@ public class Settings extends AppCompatActivity {
               }
           });
 
+          //---------------------CHARGING ALERT-----------------
+
+
+
+
 
 
 
@@ -118,6 +123,7 @@ public class Settings extends AppCompatActivity {
           //----------------LOCATION PICKER---------------------
 
           btPicker = findViewById(R.id.bt_picker);
+          btHistory = findViewById(R.id.bt_history);
           textview = findViewById(R.id.text_view);
 
           btPicker.setOnClickListener(new View.OnClickListener() {
@@ -133,6 +139,14 @@ public class Settings extends AppCompatActivity {
                       e.printStackTrace();
                   }
 
+              }
+          });
+
+          btHistory.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                  Intent i = new Intent(getApplicationContext(),History.class);
+                  startActivity(i);
               }
           });
 

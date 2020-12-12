@@ -39,7 +39,7 @@
             android:elegantTextHeight="true"
             android:lineHeight="30dp"
             android:padding="15dp"
-            android:text="This application has been developed by Android Geeks Team for CodeOff Duty Hackathon. Table no: 335. Topic: Personal/Women Safety."
+            android:text="This application has been developed by Android Geeks Team for CodeOff Duty Hackathon. Topic: Personal/Women Safety."
             android:textColor="#000000"
             android:textIsSelectable="true"
             android:textSize="20sp" />
