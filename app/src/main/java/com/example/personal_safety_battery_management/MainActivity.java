@@ -1,6 +1,7 @@
 package com.example.personal_safety_battery_management;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -59,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.appbar_background));
+
+
         permissions.add(ACCESS_FINE_LOCATION);
         permissions.add(ACCESS_COARSE_LOCATION);
         permissions.add(SEND_SMS);
@@ -107,45 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.dashboard);
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch(menuItem.getItemId()){
-                    case R.id.dashboard:
-                        return true;
-
-                    case R.id.about:
-                        startActivity(new Intent(getApplicationContext(),
-                                About.class));
-                        overridePendingTransition(0,0);
-                        return true;
-
-                    case R.id.settings:
-                        startActivity(new Intent(getApplicationContext(),
-                                Settings.class));
-                        overridePendingTransition(0,0);
-                        return true;
-
-                    case R.id.description:
-                        startActivity(new Intent(getApplicationContext(),
-                                Description.class));
-                        overridePendingTransition(0,0);
-                        return true;
-
-                    case R.id.close_friends:
-                        startActivity(new Intent(getApplicationContext(),
-                                Close_Friends.class));
-                        overridePendingTransition(0,0);
-                        return true;
-
-                }
-                return false;
-            }
-        });
 
 //        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
 //                .getBoolean("isFirstRun", true);
@@ -164,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
         if(HomeLocation.homeLong==0 && HomeLocation.homeLat==0) {
             Intent myIntent = new Intent(getApplicationContext(), HomeLocation.class);
             startActivityForResult(myIntent, 0);
+            onBackPressed();
         }
         else {
             Intent myIntent = new Intent(getApplicationContext(), Dashboard.class);
@@ -175,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
         double homeLat=HomeLocation.homeLat;
         double homeLong=HomeLocation.homeLong;
 
-        tv.setText("Current data"+currLat+"-"+currLong+". Home data "+homeLat+"-"+homeLong);
+       // tv.setText("Current data"+currLat+"-"+currLong+". Home data "+homeLat+"-"+homeLong);
 
     }
 
@@ -252,5 +220,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         locationTrack.stopListener();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent myIntent = new Intent(getApplicationContext(), Dashboard.class);
+        startActivityForResult(myIntent, 0);
     }
 }
