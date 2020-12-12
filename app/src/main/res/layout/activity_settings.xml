@@ -7,16 +7,8 @@
     tools:context=".Settings"
     android:background="@drawable/gradient_background">
 
-    <ScrollView android:layout_marginTop="30dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView">
 
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
 
     <TextView
         android:id="@+id/loc"
@@ -36,13 +28,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="150dp"
         android:layout_centerHorizontal="true"
         android:text="View Alert History"
         android:textColor="#ffffff"
         android:background="@drawable/gradient_background2"
         android:layout_marginHorizontal="115dp"
-        android:layout_marginVertical="50dp"
         android:padding="10dp"
         android:elevation="30dp"
         android:visibility="visible"
@@ -52,13 +43,11 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="300dp"
         android:layout_centerHorizontal="true"
         android:text="Residential Location"
         android:textColor="#ffffff"
         android:background="@drawable/gradient_background2"
-        android:layout_marginHorizontal="115dp"
-        android:layout_marginVertical="50dp"
         android:padding="10dp"
         android:elevation="30dp"
         android:visibility="visible"
@@ -77,7 +66,7 @@
         app:cardCornerRadius="30dp"
         app:cardElevation="20dp"
         android:layout_width="350dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="450dp"
         android:layout_height="145dp"
         android:layout_centerHorizontal="true">
     <TextView
@@ -119,8 +108,8 @@
 
 
     </androidx.cardview.widget.CardView>
-    </LinearLayout>
-    </ScrollView>
+
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

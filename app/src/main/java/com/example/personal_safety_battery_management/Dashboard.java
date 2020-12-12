@@ -134,11 +134,11 @@ public class Dashboard extends AppCompatActivity {
                 System.out.println("Typed msg: "+typed_msg);
                 if(battery_level<=10)
                 {
-                    msg_temp="Sent from SAFETY BATTERY ALERTZ." + typed_msg+" My battery is about to die (Automatic alert).\nBattery: "+battery_level+"%.\nCurrent location: "+loc;
+                    msg_temp="Sent from PERSONAL SAFETY ALERTZ." + typed_msg+" My battery is about to die (Automatic alert).\nBattery: "+battery_level+"%.\nCurrent location: "+loc;
                 }
                 else
                 {
-                    msg_temp="Sent from SAFETY BATTERY ALERTZ." + typed_msg+" (Manual Alert).\nBattery: "+battery_level+"%.\nCurrent location: "+loc;
+                    msg_temp="Sent from PERSONAL SAFETY ALERTZ." + typed_msg+" (Manual Alert).\nBattery: "+battery_level+"%.\nCurrent location: "+loc;
                 }
                 AlertModel alertModel = new AlertModel(-1,battery_level,loc,msg_temp,name.get(0),name.get(1),name.get(2),phone.get(0),phone.get(1),phone.get(2));
                 boolean success = dataBaseHelper.addOneAlert(alertModel);

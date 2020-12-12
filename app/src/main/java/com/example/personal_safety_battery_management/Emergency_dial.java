@@ -43,7 +43,7 @@ public class Emergency_dial extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(Emergency_dial.this, "Calling Ambulance", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Intent.ACTION_CALL);
-                intent.setData(Uri.parse("tel:9604996583"));                    //---Rupesh's Number
+                intent.setData(Uri.parse("tel:9359826034"));                    //---Shubham's Number
                 startActivity(intent);
             }
         });
