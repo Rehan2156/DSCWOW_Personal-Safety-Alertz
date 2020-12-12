@@ -26,7 +26,7 @@ public class Description extends AppCompatActivity {
                 switch(menuItem.getItemId()){
                     case R.id.dashboard:
                         startActivity(new Intent(getApplicationContext(),
-                                Dashboard.class));
+                                MainActivity.class));
                         overridePendingTransition(0,0);
                         return true;
 

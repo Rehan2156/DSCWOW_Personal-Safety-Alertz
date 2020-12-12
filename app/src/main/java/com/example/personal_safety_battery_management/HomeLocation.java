@@ -42,9 +42,10 @@ public class HomeLocation extends AppCompatActivity {
                 } catch (GooglePlayServicesNotAvailableException e) {
                     e.printStackTrace();
                 }
-
+                System.out.println("Location hai"+MainActivity.currLat);
             }
         });
+
     }
 
     @Override
