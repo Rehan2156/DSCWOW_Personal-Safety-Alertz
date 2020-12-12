@@ -36,28 +36,19 @@
         android:layout_height="570dp"
         android:layout_centerHorizontal="true">
 
-
-
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="10dp">
 
-
                 <ListView
                     android:id="@+id/lv_custList"
-                    android:layout_width="350dp"
-                    android:layout_height="532dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
 
                     />
             </LinearLayout>
-        </ScrollView>
     </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
