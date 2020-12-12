@@ -14,7 +14,6 @@
         android:layout_marginTop="30dp"
         android:text="Select your home location"
         android:textColor="#009688"
-        android:padding="15dp"
         android:textColorHighlight="#E91E63"
         android:textIsSelectable="true"
 
@@ -25,7 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="100dp"
         android:text="Residential Location"
         android:textColor="#FF0000"
         android:textColorHighlight="#673AB7"

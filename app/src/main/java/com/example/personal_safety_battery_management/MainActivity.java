@@ -38,6 +38,9 @@ import java.util.ArrayList;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
+import static android.Manifest.permission.SEND_SMS;
+import static android.Manifest.permission.READ_CONTACTS;
+import static android.Manifest.permission.CALL_PHONE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     public static double currLat=0;
 
     private final static int ALL_PERMISSIONS_RESULT = 101;
-    LocationTrack locationTrack;
+    LocationTrack locationTrack,lt;
     TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
 
         permissions.add(ACCESS_FINE_LOCATION);
         permissions.add(ACCESS_COARSE_LOCATION);
+        permissions.add(SEND_SMS);
+        permissions.add(READ_CONTACTS);
+        permissions.add(CALL_PHONE);
 
         permissionsToRequest = findUnAskedPermissions(permissions);
         //get the permissions we have asked for before but are not granted..
@@ -75,28 +81,71 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-                locationTrack = new LocationTrack(MainActivity.this);
-
-
-                if (locationTrack.canGetLocation()) {
+        lt=new LocationTrack(MainActivity.this);
+        locationTrack = new LocationTrack(MainActivity.this);
 
 
-                    double longitude = locationTrack.getLongitude();
-                    double latitude = locationTrack.getLatitude();
-                    this.currLat=latitude;
-                    this.currLong=longitude;
-                    System.out.println("lat:"+longitude+" - "+latitude);
+        if (locationTrack.canGetLocation()) {
 
-                    Toast.makeText(getApplicationContext(), "Longitude:" + Double.toString(longitude) + "\nLatitude:" + Double.toString(latitude), Toast.LENGTH_SHORT).show();
-                } else {
 
-                    locationTrack.showSettingsAlert();
+            double longitude = locationTrack.getLongitude();
+            double latitude = locationTrack.getLatitude();
+            this.currLat=latitude;
+            this.currLong=longitude;
+            System.out.println("lat:"+longitude+" - "+latitude);
+
+            Toast.makeText(getApplicationContext(), "Longitude:" + Double.toString(longitude) + "\nLatitude:" + Double.toString(latitude), Toast.LENGTH_SHORT).show();
+        } else {
+
+            locationTrack.showSettingsAlert();
+        }
+
+
+
+
+
+
+
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.dashboard);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch(menuItem.getItemId()){
+                    case R.id.dashboard:
+                        return true;
+
+                    case R.id.about:
+                        startActivity(new Intent(getApplicationContext(),
+                                About.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.settings:
+                        startActivity(new Intent(getApplicationContext(),
+                                Settings.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.description:
+                        startActivity(new Intent(getApplicationContext(),
+                                Description.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.close_friends:
+                        startActivity(new Intent(getApplicationContext(),
+                                Close_Friends.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
                 }
-
-
-
-
+                return false;
+            }
+        });
 
 //        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
 //                .getBoolean("isFirstRun", true);
@@ -170,8 +219,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (permissionsRejected.size() > 0) {
-
-
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         if (shouldShowRequestPermissionRationale((String) permissionsRejected.get(0))) {
                             showMessageOKCancel("These permissions are mandatory for the application. Please allow access.",
@@ -188,10 +235,8 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 }
-
                 break;
         }
-
     }
 
     private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener) {

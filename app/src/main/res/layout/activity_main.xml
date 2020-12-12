@@ -13,12 +13,33 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Personal Safety Alertz"
+        android:text="Personal Safety"
         android:textColor="#009688"
         android:textColorHighlight="#E91E63"
         android:textIsSelectable="true"
         android:textSize="20sp"
         android:id="@+id/loc"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+
+        android:textColor="#009688"
+        android:textColorHighlight="#E91E63"
+        android:textIsSelectable="true"
+        android:textSize="20sp"
+        android:id="@+id/text1"/>
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/editText2"
+        android:layout_marginTop="265dp"
+        android:hint="Write Something..."
+        />
 
     <Button
         android:id="@+id/send_alert"
@@ -32,6 +53,76 @@
         android:textColorHighlight="#673AB7"
         android:visibility="visible"
         tools:visibility="visible" />
+    <Button
+        android:id="@+id/emergency"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="280dp"
+        android:text="Emergency!!!"
+        android:textColor="#000000"
+        android:textColorHighlight="#673AB7"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+
+    <Button
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="280dp"
+        android:text="Help!!!"
+        android:textColor="#000000"
+        android:textColorHighlight="#673AB7"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/come_here_asap"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="210dp"
+        android:text="Come here ASAP!!!"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:textColorHighlight="#673AB7"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+
+    <Button
+        android:id="@+id/come_home_late"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginBottom="140dp"
+        android:text="I'll come home late"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:textColorHighlight="#673AB7"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/emergency_dial_button"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:text="Speed Dial"
+        android:textColor="#FF0303"
+        android:textColorHighlight="#673AB7"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Emergency_dial">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Emergency Dial"
+        android:textColor="#009688"
+        android:textColorHighlight="#E91E63"
+        android:textIsSelectable="true"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/call_police"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/call_ambulance"
+        android:layout_alignEnd="@+id/call_ambulance"
+        android:layout_alignRight="@+id/call_ambulance"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="52dp"
+        android:text="Call Police"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/call_ambulance"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/call_fire_brigade"
+        android:layout_alignEnd="@+id/call_fire_brigade"
+        android:layout_alignRight="@+id/call_fire_brigade"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="52dp"
+        android:text="Call Ambulance"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/call_fire_brigade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="219dp"
+        android:text="Call Fire Brigade"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
