@@ -5,85 +5,154 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".About">
-
+    tools:context=".About"
+    android:background="@drawable/gradient_background">
     <TextView
+        android:id="@+id/loc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="ABOUT US"
+        android:textColor="#000000"
+        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="About Us"
-        android:textColor="#009688"
-        android:textColorHighlight="#E91E63"
+        android:textColorHighlight="#000000"
+        android:textColorLink="#000000"
         android:textIsSelectable="true"
-        android:textSize="40sp" />
+        android:textSize="22sp" />
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="120dp"
+        android:layout_height="325dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="184dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:elegantTextHeight="true"
+            android:lineHeight="30dp"
+            android:padding="15dp"
+            android:text="This application has been developed by Android Geeks Team for CodeOff Duty Hackathon. Topic: Personal/Women Safety."
+            android:textColor="#000000"
+            android:textIsSelectable="true"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="180dp"
+            android:elegantTextHeight="true"
+            android:padding="10dp"
+            android:text="Shubham Rane "
+            android:textColor="#000000"
+            android:textIsSelectable="true"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="220dp"
+            android:elegantTextHeight="true"
+            android:text ="Rehan Shaikh"
+            android:textColor="#000000"
+            android:layout_marginLeft="100dp"
+            android:textIsSelectable="true"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="265dp"
+            android:elegantTextHeight="true"
+            android:text ="Nikhil Giramkar"
+            android:layout_marginLeft="95dp"
+            android:textColor="#000000"
+            android:textIsSelectable="true"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="480dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:paddingTop="10dp"
+            android:paddingLeft="15dp"
+            android:elegantTextHeight="true"
+            android:text ="Particpants from..."
+            android:textColor="#000000"
+            android:textIsSelectable="true"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="45dp"
+            android:elegantTextHeight="true"
+            android:text ="Developer Students Club"
+            android:textColor="#000000"
+            android:paddingLeft="15dp"
+            android:layout_marginLeft="65dp"
+            android:textIsSelectable="true"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="85dp"
+            android:elegantTextHeight="true"
+            android:text ="MESCOE, Pune"
+            android:paddingLeft="15dp"
+            android:layout_marginLeft="105dp"
+            android:textColor="#000000"
+            android:textIsSelectable="true"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_navigation"
-        app:itemBackground="@color/colorPrimary"
+        android:background="@drawable/bottom_navigation_gradient"
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
         app:menu="@menu/menu_navigation"
+        android:layout_marginBottom="0dp"
         android:layout_alignParentBottom="true"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:padding="15dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="105dp"
-        android:elegantTextHeight="true"
-        android:text ="This application has been developed by Android Geeks Team for Code Off Duty Hackathon. Table no.: 335. Topic: Personal/Women Safety."
-        android:textColor="#000000"
-        android:textColorHighlight="#E91E63"
-        android:textIsSelectable="true"
-        android:textSize="20sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:padding="10dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="240dp"
-        android:elegantTextHeight="true"
-        android:text ="Shubham Rane"
-        android:textColor="#000000"
-        android:textColorHighlight="#E91E63"
-        android:textIsSelectable="true"
-        android:textSize="18sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:padding="10dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="285dp"
-        android:elegantTextHeight="true"
-        android:text ="Rehan Shaikh"
-        android:textColor="#000000"
-        android:textColorHighlight="#E91E63"
-        android:textIsSelectable="true"
-        android:textSize="18sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:padding="10dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="330dp"
-        android:elegantTextHeight="true"
-        android:text ="Nikhil Giramkar"
-        android:textColor="#000000"
-        android:textColorHighlight="#E91E63"
-        android:textIsSelectable="true"
-        android:textSize="18sp" />
-
-
 
 </RelativeLayout>

@@ -1,6 +1,8 @@
 <resources>
+
     <string name="app_name">Battery Safety Alertz 🕵️‍♂️🔋 </string>
     <string name="close_friends">Close Friends</string>
     <string name="closeFriends_text">Please select the close friends from your Phonebook</string>
     <string name="add_contact">+ Add Contact</string>
 </resources>
+

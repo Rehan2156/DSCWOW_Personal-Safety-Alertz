@@ -1,6 +1,7 @@
 package com.example.personal_safety_battery_management;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -38,6 +39,9 @@ import java.util.ArrayList;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
+import static android.Manifest.permission.SEND_SMS;
+import static android.Manifest.permission.READ_CONTACTS;
+import static android.Manifest.permission.CALL_PHONE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     public static double currLat=0;
 
     private final static int ALL_PERMISSIONS_RESULT = 101;
-    LocationTrack locationTrack;
+    LocationTrack locationTrack,lt;
     TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,8 +60,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.appbar_background));
+
+
         permissions.add(ACCESS_FINE_LOCATION);
         permissions.add(ACCESS_COARSE_LOCATION);
+        permissions.add(SEND_SMS);
+        permissions.add(READ_CONTACTS);
+        permissions.add(CALL_PHONE);
 
         permissionsToRequest = findUnAskedPermissions(permissions);
         //get the permissions we have asked for before but are not granted..
@@ -75,24 +86,29 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-                locationTrack = new LocationTrack(MainActivity.this);
-
-
-                if (locationTrack.canGetLocation()) {
+        lt=new LocationTrack(MainActivity.this);
+        locationTrack = new LocationTrack(MainActivity.this);
 
 
-                    double longitude = locationTrack.getLongitude();
-                    double latitude = locationTrack.getLatitude();
-                    this.currLat=latitude;
-                    this.currLong=longitude;
-                    System.out.println("lat:"+longitude+" - "+latitude);
+        if (locationTrack.canGetLocation()) {
 
-                    Toast.makeText(getApplicationContext(), "Longitude:" + Double.toString(longitude) + "\nLatitude:" + Double.toString(latitude), Toast.LENGTH_SHORT).show();
-                } else {
 
-                    locationTrack.showSettingsAlert();
-                }
+            double longitude = locationTrack.getLongitude();
+            double latitude = locationTrack.getLatitude();
+            this.currLat=latitude;
+            this.currLong=longitude;
+            System.out.println("lat:"+longitude+" - "+latitude);
+
+            Toast.makeText(getApplicationContext(), "Longitude:" + Double.toString(longitude) + "\nLatitude:" + Double.toString(latitude), Toast.LENGTH_SHORT).show();
+        } else {
+
+            locationTrack.showSettingsAlert();
+        }
+
+
+
+
+
 
 
 
@@ -115,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
         if(HomeLocation.homeLong==0 && HomeLocation.homeLat==0) {
             Intent myIntent = new Intent(getApplicationContext(), HomeLocation.class);
             startActivityForResult(myIntent, 0);
+            onBackPressed();
         }
         else {
             Intent myIntent = new Intent(getApplicationContext(), Dashboard.class);
@@ -126,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
         double homeLat=HomeLocation.homeLat;
         double homeLong=HomeLocation.homeLong;
 
-        tv.setText("Current data"+currLat+"-"+currLong+". Home data "+homeLat+"-"+homeLong);
+       // tv.setText("Current data"+currLat+"-"+currLong+". Home data "+homeLat+"-"+homeLong);
 
     }
 
@@ -170,8 +187,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (permissionsRejected.size() > 0) {
-
-
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         if (shouldShowRequestPermissionRationale((String) permissionsRejected.get(0))) {
                             showMessageOKCancel("These permissions are mandatory for the application. Please allow access.",
@@ -188,10 +203,8 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 }
-
                 break;
         }
-
     }
 
     private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener) {
@@ -207,5 +220,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         locationTrack.stopListener();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent myIntent = new Intent(getApplicationContext(), Dashboard.class);
+        startActivityForResult(myIntent, 0);
     }
 }

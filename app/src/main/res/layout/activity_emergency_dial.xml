@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Emergency_dial"
+    android:background="@drawable/gradient_background" >
+
+    <TextView
+        android:id="@+id/loc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="EMERGENCY DIAL"
+        android:textColor="#000000"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:textColorHighlight="#000000"
+        android:textColorLink="#000000"
+        android:textIsSelectable="true"
+        android:textSize="22sp" />
+
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="215dp"
+        android:layout_height="85dp"
+        android:layout_centerHorizontal="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:text="Call Police"
+            android:textSize="24dp"
+            android:textColor="#000000"
+            android:layout_marginLeft="30dp"
+            />
+    <Button
+        android:id="@+id/call_police"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/call_ambulance"
+        android:layout_alignEnd="@+id/call_ambulance"
+        android:layout_alignRight="@+id/call_ambulance"
+        android:layout_marginLeft="230dp"
+        android:layout_marginVertical="20dp"
+        android:text="Police"
+        android:textColor="#ffffff"
+        android:background="@drawable/gradient_background4"
+        android:padding="10dp"
+        android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="345dp"
+        android:layout_height="85dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:text="Call Ambulance"
+            android:textSize="24dp"
+            android:textColor="#000000"
+            android:layout_marginLeft="30dp"
+            />
+
+    <Button
+        android:id="@+id/call_ambulance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/call_fire_brigade"
+        android:layout_alignEnd="@+id/call_fire_brigade"
+        android:layout_alignRight="@+id/call_fire_brigade"
+        android:layout_marginLeft="220dp"
+        android:layout_marginVertical="20dp"
+        android:text="Ambulance"
+        android:textColor="#ffffff"
+        android:background="@drawable/gradient_background4"
+        android:padding="10dp"
+        android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="465dp"
+        android:layout_height="85dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:text="Call Fire Brigade"
+            android:textSize="24dp"
+            android:textColor="#000000"
+            android:layout_marginLeft="30dp"
+            />
+    <Button
+        android:id="@+id/call_fire_brigade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="220dp"
+        android:layout_marginVertical="20dp"
+        android:text="Fire Brigade"
+        android:textColor="#ffffff"
+        android:background="@drawable/gradient_background4"
+        android:padding="10dp"
+        android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

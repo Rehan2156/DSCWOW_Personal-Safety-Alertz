@@ -5,56 +5,186 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient_background">
 
     <TextView
+        android:id="@+id/loc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="Personal Safety Alertz"
-        android:textColor="#009688"
-        android:textColorHighlight="#E91E63"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/capriola"
+        android:text="Safety and "
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorLink="#000000"
         android:textIsSelectable="true"
-        android:textSize="20sp"
-        android:id="@+id/loc"/>
-
-    <Button
-        android:id="@+id/send_alert"
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/loc2"
         android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/capriola"
+        android:text="Battery Alertz "
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorLink="#000000"
+        android:textIsSelectable="true"
+        android:textSize="30sp" />
+
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="150dp"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="350dp"
-        android:text="Send Alert"
-        android:textColor="#FF0000"
-        android:textColorHighlight="#673AB7"
+        >
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:id="@+id/editText2"
+            android:layout_marginTop="40dp"
+            android:hint="Write Something..."
+            android:fontFamily="@font/capriola"
+            android:background="@drawable/edit_text_border"
+            android:padding="15dp"
+            />
+
+        <Button
+            android:id="@+id/send_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="125dp"
+            android:layout_marginTop="115dp"
+            android:background="@drawable/button_border"
+            android:fontFamily="@font/capriola"
+            android:padding="10dp"
+            android:text="Send"
+            android:textColor="#000000"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="390dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        >
+        <TextView
+            android:id="@+id/loc3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/capriola"
+            android:text="Quick texts..."
+            android:textColor="#000000"
+            android:textColorHighlight="#000000"
+            android:textColorLink="#000000"
+            android:textIsSelectable="true"
+            android:textSize="20sp" />v
+        <Button
+            android:id="@+id/emergency"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
+            android:text="Emergency!!!"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/gradient_background2"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/come_home_late"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="25dp"
+            android:text="I'll come home late"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/gradient_background2"
+            android:visibility="visible"
+            tools:visibility="visible" />
+        <Button
+            android:id="@+id/come_here_asap"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="125dp"
+            android:layout_marginLeft="20dp"
+            android:text="Come here ASAP!!!"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:background="@drawable/gradient_background2"
+            android:padding="10dp"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/help"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="125dp"
+            android:layout_marginLeft="190dp"
+            android:layout_marginRight="25dp"
+            android:text="Help Me!!!"
+            android:background="@drawable/gradient_background2"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/emergency_dial_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="325dp"
+        android:layout_marginBottom="75dp"
+        android:background="@drawable/gradient_background2"
+        android:padding="15dp"
+        android:src="@drawable/ic_baseline_phone_forwarded_24"
         android:visibility="visible"
         tools:visibility="visible" />
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_navigation"
-        app:itemBackground="@color/colorPrimary"
+        android:background="@drawable/bottom_navigation_gradient"
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
         app:menu="@menu/menu_navigation"
+        android:layout_marginBottom="0dp"
         android:layout_alignParentBottom="true"/>
-
-<!--    <EditText-->
-<!--        android:id="@+id/editText2"-->
-<!--        android:layout_width="175dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:ems="10"-->
-<!--        android:gravity="start|top"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginBottom="430dp"-->
-<!--        android:inputType="textMultiLine"-->
-<!--        android:hint="Write a message"-->
-<!--        />-->
-
 
 </RelativeLayout>

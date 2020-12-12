@@ -1,6 +1,7 @@
 package com.example.personal_safety_battery_management;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -27,6 +28,9 @@ public class HomeLocation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_location);
 
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.appbar_background));
+
         btPicker = findViewById(R.id.bt_picker);
         textview = findViewById(R.id.text_view);
 
@@ -42,9 +46,10 @@ public class HomeLocation extends AppCompatActivity {
                 } catch (GooglePlayServicesNotAvailableException e) {
                     e.printStackTrace();
                 }
-
+                System.out.println("Location hai"+MainActivity.currLat);
             }
         });
+
     }
 
     @Override
@@ -81,5 +86,12 @@ public class HomeLocation extends AppCompatActivity {
                 .setNegativeButton("Cancel", null)
                 .create()
                 .show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent myIntent = new Intent(getApplicationContext(), Dashboard.class);
+        startActivityForResult(myIntent, 0);
     }
 }
