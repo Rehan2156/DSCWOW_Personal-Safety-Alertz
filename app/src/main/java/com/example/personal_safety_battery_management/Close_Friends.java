@@ -43,9 +43,15 @@ public class Close_Friends extends AppCompatActivity {
         if(!everyone.isEmpty()) {
             for(ContactModel i:everyone)
                 System.out.println(i.getName());
-            add_no1.setText(everyone.get(0).getPhone());
-            add_no2.setText(everyone.get(1).getPhone());
-            add_no3.setText(everyone.get(2).getPhone());
+            try {
+                add_no1.setText(everyone.get(0).getPhone());
+                add_no2.setText(everyone.get(1).getPhone());
+                add_no3.setText(everyone.get(2).getPhone());
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
             System.out.println("executing....");
         }
 

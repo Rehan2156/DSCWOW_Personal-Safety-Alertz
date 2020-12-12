@@ -120,12 +120,27 @@ public class Dashboard extends AppCompatActivity {
                 List<ContactModel> everyone = dataBaseHelper.getEveryone();
                 System.out.println(everyone.toString());
                 if(!everyone.isEmpty()) {
-                    phone.add(everyone.get(0).getPhone());
-                    name.add(everyone.get(0).getName());
-                    phone.add(everyone.get(1).getPhone());
-                    name.add(everyone.get(1).getName());
-                    phone.add(everyone.get(2).getPhone());
-                    name.add(everyone.get(2).getName());
+                    //-----Solved the problem of app crashing with less than 3 contacts saved
+                    try {
+                        for(int i=0; i<3; i++) {
+                            if(everyone.size()>i) {
+                                phone.add(everyone.get(i).getPhone());
+                                name.add(everyone.get(i).getName());
+                            }
+                            else{
+                                phone.add(null);
+                                name.add(null);
+                            }
+                        }
+//                        phone.add(everyone.get(1).getPhone());
+//                        name.add(everyone.get(1).getName());
+//                        phone.add(everyone.get(2).getPhone());
+//                        name.add(everyone.get(2).getName());
+                    }
+                    catch (Exception e)
+                    {
+                        e.printStackTrace();
+                    }
                 }
 
                 String msg_temp="";
@@ -134,11 +149,11 @@ public class Dashboard extends AppCompatActivity {
                 System.out.println("Typed msg: "+typed_msg);
                 if(battery_level<=10)
                 {
-                    msg_temp="Sent from SAFETY BATTERY ALERTZ." + typed_msg+" My battery is about to die (Automatic alert).\nBattery: "+battery_level+"%.\nCurrent location: "+loc;
+                    msg_temp="Sent from PERSONAL SAFETY ALERTZ." + typed_msg+" My battery is about to die (Automatic alert).\nBattery: "+battery_level+"%.\nCurrent location: "+loc;
                 }
                 else
                 {
-                    msg_temp="Sent from SAFETY BATTERY ALERTZ." + typed_msg+" (Manual Alert).\nBattery: "+battery_level+"%.\nCurrent location: "+loc;
+                    msg_temp="Sent from PERSONAL SAFETY ALERTZ." + typed_msg+" (Manual Alert).\nBattery: "+battery_level+"%.\nCurrent location: "+loc;
                 }
                 AlertModel alertModel = new AlertModel(-1,battery_level,loc,msg_temp,name.get(0),name.get(1),name.get(2),phone.get(0),phone.get(1),phone.get(2));
                 boolean success = dataBaseHelper.addOneAlert(alertModel);
