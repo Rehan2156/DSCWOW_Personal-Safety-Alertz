@@ -17,4 +17,9 @@ Team name: Android Geeks
 
 The project has been ranked in top 20 at <b>Google DSC WoW Code Off Duty Hackathon</b> among 500+ participating teams😎
 
+Submission link: https://devfolio.co/submissions/personal-safety-alertz-app
+
+![winner](https://user-images.githubusercontent.com/58468910/103685282-f948c180-4fb2-11eb-9f50-c4873fc52165.JPG)
+
+
 
