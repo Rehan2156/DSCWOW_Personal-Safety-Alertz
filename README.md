@@ -37,8 +37,10 @@ Link to demo video: https://youtu.be/roNMDbMrnm0
 
 Link to presentation video: https://youtu.be/gziuCjNqhsA
 
+Link to live stream presentation of project on YouTube: https://youtu.be/ZBn-t4ztprU?t=4176
+
 # Top 20🤩
-Team name: Android Geeks
+Team name: **Android Geeks**
 
 The project has been ranked in top 20 at <b>Google DSC WoW Code Off Duty Hackathon</b> among 500+ participating teams😎
 
