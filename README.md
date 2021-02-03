@@ -54,6 +54,8 @@ Submission link: https://devfolio.co/submissions/personal-safety-alertz-app
 <img src="https://user-images.githubusercontent.com/58468910/104050809-2e505080-520d-11eb-879d-39688991ade0.jpg" width="30%" height="30%">
 <img src="https://user-images.githubusercontent.com/58468910/104050868-47f19800-520d-11eb-8cf2-96d8b4e729c8.jpg" width="30%" height="30%">
 
+# Support
+Give a ⭐️ if this project helped you!
 
 
 
